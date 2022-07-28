@@ -30,13 +30,37 @@ compress('yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 Approach
 -------------------
 1. Create start and end variables, (let result = [], return result)
-2. create numbers string
-3. Create two pointers start
-4. Create while loop so it keeps iterating until it reaches the end of the input, s.  
-5. if 1st pointer is equal to 2nd pointer, iterate the 2nd pointer up
-6. iterate until they are not equal, else create variable num to equal the difference between the 2nd and 1st pointer
-7. push to the result array UNLESS the two pointer's difference are equal to 1.
-8. if the difference is equal to 1, push the letter by itself, ELSE push the number and the letter to the result.
-9. let the first pointer, start at the second pointer and repeat
-10. join the results array into a string
- 
+2. Create two pointers start
+3. Create while loop so it keeps iterating until it reaches the end of the input, s.  
+4. if 1st pointer is equal to 2nd pointer, iterate the 2nd pointer up
+5. iterate until they are not equal, else create variable num to equal the difference between the 2nd and 1st pointer
+6. push to the result array UNLESS the two pointer's difference are equal to 1.
+7. if the difference is equal to 1, push the letter by itself, ELSE push the number and the letter to the result.
+8. let the first pointer, start at the second pointer and repeat
+9. join the results array into a string
+
+
+---------------
+ Solution
+-----------------
+const compress = (s) => {
+  let result = [];
+  let i = 0;
+  let j = 0;
+  
+  while (j <= s.length) {
+    if (s[i] === s[j]) {
+      j += 1;
+    } else {
+      const num = j - i;
+      if (num === 1) {
+        result.push(s[i]);
+      } else {
+        result.push(String(num), s[i]);
+      }
+      i = j;
+    }
+  }
+  
+  return result.join('');
+};
