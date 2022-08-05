@@ -45,8 +45,9 @@ mostFrequentChar("riverbed"); // -> 'r'
 //Solution
 const mostFrequentChar = (s) => {
   const count = {}
+  
   for (let char of s) {
-    if (s[char]){
+    if (char in count){
       count[char]++
     } else {
       count[char] = 1
@@ -59,6 +60,13 @@ const mostFrequentChar = (s) => {
       best = char
     }
   }
+  return best
+};
+
+
+
+module.exports = {
+  mostFrequentChar,
 };
 
 
