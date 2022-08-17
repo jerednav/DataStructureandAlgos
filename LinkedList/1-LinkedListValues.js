@@ -50,7 +50,7 @@ linkedListValues(null); // -> [ ]
 
 
 
-//SOlution
+//SOlution - iterative
 const linkedListValues = (head) => {
   let values = []
   let current = head
@@ -63,3 +63,14 @@ const linkedListValues = (head) => {
 
 
 //Recursive
+const linkedListValues = (head) = {
+  let values = []
+  fillValues(head, values)
+  return values
+}
+
+const fillValues = (head, values) = {
+  if (head === null) return
+  values.push(head.val)
+  fillValues(head.next, values)
+}
