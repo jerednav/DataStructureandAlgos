@@ -89,3 +89,23 @@ const insertNode = (head, value, index) => {
   }
   return head
 };
+
+
+//Recursive SOlution
+const insertNode = (head, value, index, count = 0) => {
+  if (index === 0) {
+    const newHead = new Node(value);
+    newHead.next = head;
+    return newHead;
+  }
+  
+  if (count === index - 1) {
+    const next = head.next;
+    head.next = new Node(value);
+    head.next.next = next;
+    return head;
+  }
+  
+  insertNode(head.next, value, index, count + 1);
+  return head;
+};
