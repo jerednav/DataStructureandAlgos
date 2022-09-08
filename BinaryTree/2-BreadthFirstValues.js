@@ -108,7 +108,7 @@ const breadthFirstValues = (root) => {
     values.push(current.val)
     
     if(current.left !== null) queue.push(current.left)
-    if(current.left !== null) queue.push(current.left)
+    if(current.right !== null) queue.push(current.right)
   }
   return values
 };
