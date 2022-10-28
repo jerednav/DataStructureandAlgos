@@ -1,4 +1,4 @@
-/* uncompress
+uncompress
 
 Write a function, uncompress, that takes in a string as an argument. The input string will be formatted into multiple groups according to the following pattern:
 
@@ -27,4 +27,11 @@ test_04:
 
 uncompress("127y"); // ->'yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'
 
-*/
+//SOLUTION STEPS
+
+1. Write down steps
+
+  1. Create number array to find numbers included in string
+  2. Create empty array to hold new values
+  3. 
+
