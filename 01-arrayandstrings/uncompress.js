@@ -26,3 +26,5 @@ uncompress("3n12e2z"); // -> 'nnneeeeeeeeeeeezz'
 test_04:
 
 uncompress("127y"); // ->'yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'
+
+*/
